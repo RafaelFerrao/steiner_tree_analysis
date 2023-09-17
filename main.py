@@ -35,10 +35,10 @@ def create_graph(path):
     return graph, terminal_list, optimal_cost
 
 
-G, terminals, optimal_cost = create_graph("datasets/PACE_TRACK_2/135(164009591).txt")
+G, terminals, optimal_cost = create_graph("datasets/PACE_TRACK_1/163(5194).txt")
 
 execution_time = []
-algorithm = "kou"
+algorithm = "approximation"
 
 for i in range(1):
     start_time = time()
@@ -55,7 +55,7 @@ plt.ylabel('Time')
 plt.xlabel('Iteration')
 plt.show()
 
-if algorithm == "kou":
+if algorithm == "approximation":
     number_of_leaves = 0
     for node in steiner_tree.nodes:
         if steiner_tree.degree[node] == 1:
